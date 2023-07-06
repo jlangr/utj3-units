@@ -17,7 +17,10 @@ class ABooking {
    static final int VALID_AGE = 18;
    static final LocalDateTime VALID_DEPARTURE_DATE =
       LocalDateTime.now().plus(1, DAYS);
-   static final List<String> VALID_ITINERARY = List.of("COS", "PRG");
+   static final String INVALID_AIRPORT_CODE = "YYZ";
+   static final String VALID_AIRPORT_CODE1 = "COS";
+   static final String VALID_AIRPORT_CODE2 = "PRG";
+   static final List<String> VALID_ITINERARY = List.of(VALID_AIRPORT_CODE1, VALID_AIRPORT_CODE2);
    static final String VALID_NAME = "Aslan";
 
    @Nested
@@ -86,7 +89,8 @@ class ABooking {
 
       @Test
       void itineraryContainsInvalidSegment() {
-         var invalidAirportInItinerary = List.of("BOO", "RAY");
+         var invalidAirportInItinerary = List.of(VALID_AIRPORT_CODE1, INVALID_AIRPORT_CODE);
+         System.out.println(invalidAirportInItinerary);
          var booking = new Booking(VALID_NAME, VALID_AGE, VALID_DEPARTURE_DATE, invalidAirportInItinerary);
 
          var results = booking.validate();

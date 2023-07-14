@@ -25,6 +25,18 @@ public class Location {
    }
    // END_HIGHLIGHT
 
+   public int getX() {
+      return x;
+   }
+
+   public int getY() {
+      return y;
+   }
+
+   public Heading getHeading() {
+      return heading;
+   }
+
    @Override
    public boolean equals(Object o) {
       if (this == o) return true;

@@ -14,6 +14,7 @@ public class Location {
       this.heading = heading;
    }
 
+   // START_HIGHLIGHT
    public void move(int distance) {
       switch (heading) {
          case North -> y = y + distance;
@@ -22,6 +23,7 @@ public class Location {
          case West -> x = x - distance;
       }
    }
+   // END_HIGHLIGHT
 
    @Override
    public boolean equals(Object o) {

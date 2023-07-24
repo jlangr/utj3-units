@@ -6,8 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static units.FixedLocation.Heading.East;
 import static units.FixedLocation.Heading.North;
 
@@ -28,15 +27,14 @@ class ADestinationList {
    //START:many
    @Test
    void allowsAddingLocations() {
-      list.add(new FixedLocation(1, 2, North));
-      list.add(new FixedLocation(1, 3, East));
+      var locationOne = new FixedLocation(1, 2, North);
+      var locationTwo = new FixedLocation(1, 3, East);
+      list.add(locationOne);
+      list.add(locationTwo);
 
       var locations = list.getLocations();
 
-      assertEquals(List.of(
-            new FixedLocation(1, 2, North),
-            new FixedLocation(1, 3, East)),
-         locations);
+      assertEquals(List.of(locationOne, locationTwo), locations);
    }
    //END:many
 // START:zero

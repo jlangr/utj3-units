@@ -25,16 +25,17 @@ class ADestinationList {
 //END:zero
 
    //START:many
+   static final FixedLocation ORIGIN = new FixedLocation(0, 0, East);
+   static final FixedLocation NORTHEAST = new FixedLocation(3, 3, North);
+
    @Test
    void allowsAddingLocations() {
-      var locationOne = new FixedLocation(1, 2, North);
-      var locationTwo = new FixedLocation(1, 3, East);
-      list.add(locationOne);
-      list.add(locationTwo);
+      list.add(ORIGIN);
+      list.add(NORTHEAST);
 
       var locations = list.getLocations();
 
-      assertEquals(List.of(locationOne, locationTwo), locations);
+      assertEquals(List.of(ORIGIN, NORTHEAST), locations);
    }
    //END:many
 // START:zero

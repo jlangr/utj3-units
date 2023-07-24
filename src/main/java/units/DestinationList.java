@@ -4,13 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DestinationList {
-   private final List<Location> locations = new ArrayList<>();
+   private final List<FixedLocation> locations = new ArrayList<>();
 
-   public void add(Location location) {
+   public void add(FixedLocation location) {
+      // START:add
       locations.add(location);
+      // END:add
    }
 
-   public List<Location> getLocations() {
+   public List<FixedLocation> getLocations() {
       return locations;
    }
 }

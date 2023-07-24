@@ -1,4 +1,3 @@
-//START:zero
 package units;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -22,9 +21,7 @@ class ADestinationList {
    void isEmptyWhenCreated() {
       assertTrue(list.getLocations().isEmpty());
    }
-//END:zero
 
-   //START:many
    static final FixedLocation ORIGIN = new FixedLocation(0, 0, East);
    static final FixedLocation NORTHEAST = new FixedLocation(3, 3, North);
 
@@ -37,7 +34,17 @@ class ADestinationList {
 
       assertEquals(List.of(ORIGIN, NORTHEAST), locations);
    }
-   //END:many
-// START:zero
+
+   //START:noDuplicates
+   @Test
+   void doesNotAddLocationWhenAlreadyContained() {
+      list.add(ORIGIN);
+      list.add(NORTHEAST);
+      list.add(ORIGIN);
+
+      var locations = list.getLocations();
+
+      assertEquals(List.of(ORIGIN, NORTHEAST), locations);
+   }
+   //END:noDuplicates
 }
-// END:zero

@@ -6,11 +6,13 @@ import java.util.List;
 public class DestinationList {
    private final List<FixedLocation> locations = new ArrayList<>();
 
+   // START:add
    public void add(FixedLocation location) {
-      // START:add
+      if (locations.contains(location))
+         return;
       locations.add(location);
-      // END:add
    }
+   // END:add
 
    public List<FixedLocation> getLocations() {
       return locations;

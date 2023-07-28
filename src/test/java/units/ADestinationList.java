@@ -33,9 +33,7 @@ class ADestinationList {
       list.add(ORIGIN);
       list.add(NORTHEAST);
 
-      var locations = list.getLocations();
-
-      assertEquals(List.of(ORIGIN, NORTHEAST), locations);
+      assertEquals(List.of(ORIGIN, NORTHEAST), list.getLocations());
    }
    //END:many
 // START:zero

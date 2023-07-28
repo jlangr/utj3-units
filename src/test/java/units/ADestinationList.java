@@ -31,12 +31,8 @@ class ADestinationList {
       list.add(new FixedLocation(1, 2, North));
       list.add(new FixedLocation(1, 3, East));
 
-      var locations = list.getLocations();
-
-      assertEquals(List.of(
-            new FixedLocation(1, 2, North),
-            new FixedLocation(1, 3, East)),
-         locations);
+      assertEquals(List.of(new FixedLocation(1, 2, North), new FixedLocation(1, 3, East)),
+         list.getLocations());
    }
    //END:many
 // START:zero

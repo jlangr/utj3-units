@@ -10,6 +10,8 @@ import static units.FixedLocation.Heading.East;
 import static units.FixedLocation.Heading.North;
 
 class ADestinationList {
+   static final FixedLocation ORIGIN = new FixedLocation(0, 0, East);
+   static final FixedLocation NORTHEAST = new FixedLocation(3, 3, North);
    private DestinationList list;
 
    @BeforeEach
@@ -22,29 +24,25 @@ class ADestinationList {
       assertTrue(list.getLocations().isEmpty());
    }
 
-   static final FixedLocation ORIGIN = new FixedLocation(0, 0, East);
-   static final FixedLocation NORTHEAST = new FixedLocation(3, 3, North);
-
+   // START:add
    @Test
    void allowsAddingLocations() {
       list.add(ORIGIN);
       list.add(NORTHEAST);
 
-      var locations = list.getLocations();
-
-      assertEquals(List.of(ORIGIN, NORTHEAST), locations);
+      assertEquals(List.of(ORIGIN, NORTHEAST), list.getLocations());
    }
+   // END:add
 
    //START:noDuplicates
    @Test
    void doesNotAddLocationWhenAlreadyContained() {
       list.add(ORIGIN);
       list.add(NORTHEAST);
+
       list.add(ORIGIN);
 
-      var locations = list.getLocations();
-
-      assertEquals(List.of(ORIGIN, NORTHEAST), locations);
+      assertEquals(List.of(ORIGIN, NORTHEAST), list.getLocations());
    }
    //END:noDuplicates
 }

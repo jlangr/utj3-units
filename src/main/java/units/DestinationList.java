@@ -14,7 +14,7 @@ public class DestinationList {
    }
    // END:add
 
-   public void moveObjectsWithHeading(FixedLocation.Heading heading, int x, int y) {
+   public void moveLocationsMatchingHeading(FixedLocation.Heading heading, int x, int y) {
       this.locations = locations.stream()
          .filter(location -> location.heading().equals(heading))
          .map(location -> new FixedLocation(x, y, heading))

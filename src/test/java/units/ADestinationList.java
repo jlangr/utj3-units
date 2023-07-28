@@ -32,9 +32,7 @@ class ADestinationList {
       list.add(locationOne);
       list.add(locationTwo);
 
-      var locations = list.getLocations();
-
-      assertEquals(List.of(locationOne, locationTwo), locations);
+      assertEquals(List.of(locationOne, locationTwo), list.getLocations());
    }
    //END:many
 // START:zero

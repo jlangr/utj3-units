@@ -55,7 +55,7 @@ class ADestinationList {
          list.add(new FixedLocation(0, 0, East));
          list.add(new FixedLocation(1, 1, North));
 
-         list.moveLocationsMatchingHeading(East, 2, 3);
+         list.moveLocationsWithHeading(East, 2, 3);
 
          assertEquals(List.of(
                new FixedLocation(2, 3, East),

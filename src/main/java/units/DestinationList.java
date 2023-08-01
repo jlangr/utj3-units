@@ -3,6 +3,8 @@ package units;
 import java.util.ArrayList;
 import java.util.List;
 
+import static units.FixedLocation.*;
+
 public class DestinationList {
    private List<FixedLocation> locations = new ArrayList<>();
 
@@ -15,10 +17,11 @@ public class DestinationList {
    // END:add
 
    // START:moveLocations
-   public void moveLocationsMatchingHeading(FixedLocation.Heading heading, int x, int y) {
+   public void moveLocationsWithHeading(Heading heading, int x, int y) {
       this.locations = locations.stream()
-         .map(location ->
-            location.heading().equals(heading) ? new FixedLocation(x, y, heading) : location)
+         .map(location -> location.heading().equals(heading)
+            ? new FixedLocation(x, y, heading)
+            : location)
          .toList();
    }
    // END:moveLocations

@@ -49,9 +49,9 @@ class ADestinationList {
 
    //START:moveLocations
    @Nested
-   class MoveLocations {
+   class MoveLocationsWithHeading {
       @Test
-      void updatesLocationsWithMatchingHeadingToNewCoordinates() {
+      void updatesMatchingLocationsWithNewCoordinates() {
          list.add(new FixedLocation(0, 0, East));
          list.add(new FixedLocation(1, 1, North));
 

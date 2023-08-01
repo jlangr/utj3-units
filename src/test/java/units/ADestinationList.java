@@ -2,6 +2,7 @@ package units;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Nested;
 
 import java.util.List;
 
@@ -45,4 +46,22 @@ class ADestinationList {
       assertEquals(List.of(ORIGIN, NORTHEAST), list.getLocations());
    }
    //END:noDuplicates
+
+   //START:moveLocations
+   @Nested
+   class MoveLocations {
+      @Test
+      void updatesLocationsWithMatchingHeadingToNewCoordinates() {
+         list.add(new FixedLocation(0, 0, East));
+         list.add(new FixedLocation(1, 1, North));
+
+         list.moveLocationsMatchingHeading(East, 2, 3);
+
+         assertEquals(List.of(
+               new FixedLocation(2, 3, East),
+               new FixedLocation(1, 1, North)),
+            list.getLocations());
+      }
+   }
+   //END:moveLocations
 }

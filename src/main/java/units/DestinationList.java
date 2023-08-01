@@ -14,12 +14,14 @@ public class DestinationList {
    }
    // END:add
 
+   // START:moveLocations
    public void moveLocationsMatchingHeading(FixedLocation.Heading heading, int x, int y) {
       this.locations = locations.stream()
-         .filter(location -> location.heading().equals(heading))
-         .map(location -> new FixedLocation(x, y, heading))
+         .map(location ->
+            location.heading().equals(heading) ? new FixedLocation(x, y, heading) : location)
          .toList();
    }
+   // END:moveLocations
 
    public List<FixedLocation> getLocations() {
       return locations;

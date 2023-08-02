@@ -26,7 +26,7 @@ public class DestinationList {
    public void removeLocationsFurtherThan(int x, int y, int distance) {
       this.locations = locations.stream()
          // START_HIGHLIGHT
-         .filter(location -> location.distanceBetween(x, y) < distance)
+         .filter(location -> location.distanceFrom(x, y) < distance)
          // END_HIGHLIGHT
          .toList();
    }

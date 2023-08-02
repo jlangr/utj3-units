@@ -13,7 +13,7 @@ public record FixedLocation(int x, int y, Heading heading) {
    }
 
    // START:moveMethod
-   double distanceBetween(int x, int y) {
+   double distanceFrom(int x, int y) {
       return Math.sqrt(Math.pow(x - x(), 2) + Math.pow(y - y(), 2));
    }
    // END:moveMethod

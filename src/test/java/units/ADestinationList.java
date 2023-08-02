@@ -70,9 +70,11 @@ class ADestinationList {
    class RemoveLocationsFurtherThan {
       @Test
       void retainsLocationsLessThanDistance() {
+         // START_HIGHLIGHT
          list.add(new FixedLocation(0, 5, North));
          list.add(new FixedLocation(0, 10, North));
          list.add(new FixedLocation(0, 15, North));
+         // END_HIGHLIGHT
 
          list.removeLocationsFurtherThan(0, 0, 9);
 

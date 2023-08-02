@@ -69,7 +69,7 @@ class ADestinationList {
    @Nested
    class RemoveLocationsFurtherThan {
       @Test
-      void filtersEntriesFromLocations() {
+      void retainsLocationsLessThanDistance() {
          list.add(new FixedLocation(0, 5, North));
          list.add(new FixedLocation(0, 10, North));
          list.add(new FixedLocation(0, 15, North));

@@ -1,6 +1,5 @@
 package units;
 
-// START:fixedLocation
 public record FixedLocation(int x, int y, Heading heading) {
    enum Heading {North, East, South, West}
 
@@ -12,5 +11,10 @@ public record FixedLocation(int x, int y, Heading heading) {
          case West -> new FixedLocation(x - distance, y, heading);
       };
    }
+
+   // START:moveMethod
+   double distanceBetween(int x, int y) {
+      return Math.sqrt(Math.pow(x - x(), 2) + Math.pow(y - y(), 2));
+   }
+   // END:moveMethod
 }
-// END:fixedLocation

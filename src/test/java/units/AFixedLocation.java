@@ -1,11 +1,11 @@
 package units;
 
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static units.FixedLocation.Heading.*;
 
-// START:fixedLocation
 public class AFixedLocation {
    @Test
    void increasesYCoordinateWhenMovingNorth() {
@@ -30,5 +30,13 @@ public class AFixedLocation {
       assertEquals(new FixedLocation(-14, 5, West),
          new FixedLocation(-2, 5, West).move(12));
    }
+
+   // START:moveMethod
+   @Nested
+   class DistanceBetween {
+      @Test
+      void is0When() {
+      }
+   }
+   // END:moveMethod
 }
-// END:fixedLocation

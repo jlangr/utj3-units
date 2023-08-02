@@ -26,6 +26,19 @@ public class DestinationList {
    }
    // END:moveLocations
 
+   // START:removeLocations
+   public void removeLocationsFurtherThan(int x, int y, int distance) {
+      this.locations = locations.stream()
+         .filter(location -> distanceBetween(location, x, y) < distance)
+         .toList();
+   }
+
+   private double distanceBetween(FixedLocation point, int x, int y) {
+      return Math.sqrt(
+         Math.pow(x - point.x(), 2) + Math.pow(y - point.y(), 2));
+   }
+   // END:removeLocations
+
    public List<FixedLocation> getLocations() {
       return locations;
    }

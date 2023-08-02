@@ -64,4 +64,22 @@ class ADestinationList {
       }
    }
    //END:moveLocations
+
+   // START:removeLocations
+   @Nested
+   class RemoveLocationsFurtherThan {
+      @Test
+      void filtersEntriesFromLocations() {
+         list.add(new FixedLocation(0, 5, North));
+         list.add(new FixedLocation(0, 10, North));
+         list.add(new FixedLocation(0, 15, North));
+
+         list.removeLocationsFurtherThan(0, 0, 9);
+
+         assertEquals(List.of(
+               new FixedLocation(0, 5, North)),
+            list.getLocations());
+      }
+   }
+   // END:removeLocations
 }

@@ -38,20 +38,17 @@ public class AFixedLocation {
 
       @Test
       void is0WhenPointsAreTheSame() {
-         assertEquals(0,
-            new FixedLocation(1, 2, h).distanceFrom(1, 2));
+         assertEquals(0, new FixedLocation(1, 2, h).distanceFrom(1, 2));
       }
 
       @Test
       void is5InClassicHypotenuseCase() {
-         assertEquals(5.0,
-            new FixedLocation(0, 0, h).distanceFrom(3, 4));
+         assertEquals(5.0, new FixedLocation(0, 0, h).distanceFrom(3, 4));
       }
 
       @Test
       void isNearSomeDoubleValue() {
-         assertEquals(5.6568,
-            new FixedLocation(10, 13, h).distanceFrom(14, 9),
+         assertEquals(5.6568, new FixedLocation(10, 13, h).distanceFrom(14, 9),
             0.0001);
       }
 

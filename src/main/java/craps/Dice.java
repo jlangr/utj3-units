@@ -13,11 +13,11 @@ public class Dice {
 
    private Random random = new Random();
 
-   // START_HIGHLIGHT
    public Roll roll(int numberOfDice) {
-   // END_HIGHLIGHT
       var dieRolls = IntStream.range(0, numberOfDice)
+         // START_HIGHLIGHT
          .map(n -> random.nextInt(DIE_SIDES) + 1)
+         // END_HIGHLIGHT
          .toArray();
       return new Roll(dieRolls);
    }

@@ -25,7 +25,7 @@ public class StringUtilsTest {
       // START:many
       @Test
       void returnsCamelCasedWord() {
-         assertEquals("Alpha", capitalize("alpha"));
+         assertEquals("Deee-lite", capitalize("deee-Lite"));
       }
       // END:many
       // START:zero

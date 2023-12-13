@@ -31,7 +31,10 @@ class ADestinationList {
       list.add(new FixedLocation(1, 2, North));
       list.add(new FixedLocation(1, 3, East));
 
-      assertEquals(List.of(new FixedLocation(1, 2, North), new FixedLocation(1, 3, East)),
+      assertEquals(
+         List.of(
+            new FixedLocation(1, 2, North),
+            new FixedLocation(1, 3, East)),
          list.getLocations());
    }
    //END:many

@@ -7,30 +7,28 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static units.StringUtils.capitalize;
 
 public class StringUtilsTest {
-   // END:zero
    @Nested
    class Capitalize {
-   // START:zero
-   @Test
-   void returnsEmptyStringWhenEmpty() {
-      assertEquals("", capitalize(""));
-   }
-   // END:zero
+      @Test
+      void returnsEmptyStringWhenEmpty() {
+         assertEquals("", capitalize(""));
+      }
+      // END:zero
 
-   // START:one
-   @Test
-   void returnsUppercasedLetterWhenSingleLetter() {
-      assertEquals("A", capitalize("a"));
-   }
-   // END:one
+      // START:one
+      @Test
+      void returnsUppercasedLetterWhenSingleLetter() {
+         assertEquals("A", capitalize("a"));
+      }
+      // END:one
 
-   // START:many
-   @Test
-   void returnsCamelCasedWord() {
-      assertEquals("Deee-lite", capitalize("deee-Lite"));
+      // START:many
+      @Test
+      void returnsCamelCasedWord() {
+         assertEquals("Deee-lite", capitalize("deee-Lite"));
+      }
+      // END:many
+      // START:zero
    }
-   // END:many
-   }
-   // START:zero
 }
 // END:zero

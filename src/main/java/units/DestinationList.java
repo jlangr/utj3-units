@@ -1,5 +1,6 @@
 package units;
 
+// START:class
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,3 +17,4 @@ public class DestinationList {
       return locations;
    }
 }
+// END:class

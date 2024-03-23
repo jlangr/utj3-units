@@ -1,10 +1,10 @@
 package units;
 
+// START:class
 import java.util.Objects;
 
 public class Location {
    enum Heading {North, East, South, West}
-
    private int x, y;
    private Heading heading;
 
@@ -25,13 +25,8 @@ public class Location {
    }
    // END_HIGHLIGHT
 
-   public int getX() {
-      return x;
-   }
-
-   public int getY() {
-      return y;
-   }
+   public int getX() { return x; }
+   public int getY() { return y; }
 
    public Heading getHeading() {
       return heading;
@@ -39,12 +34,15 @@ public class Location {
 
    @Override
    public boolean equals(Object o) {
+      // ...
+      // END:class
       if (this == o) return true;
       if (o == null || getClass() != o.getClass()) return false;
       Location location = (Location) o;
       return x == location.x
           && y == location.y
           && heading == location.heading;
+      // START:class
    }
 
    @Override
@@ -57,3 +55,4 @@ public class Location {
       return "(" + x + ", " + y + ", => " + heading + ')';
    }
 }
+// END:class

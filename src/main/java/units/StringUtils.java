@@ -1,5 +1,6 @@
 package units;
 
+// START:class
 public class StringUtils {
    // START:capitalize
    static String capitalize(String word) {
@@ -9,3 +10,4 @@ public class StringUtils {
    }
    // END:capitalize
 }
+// END:class

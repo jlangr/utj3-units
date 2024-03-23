@@ -1,5 +1,6 @@
 package units;
 
+// START:class
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -16,3 +17,4 @@ public class ALocation {
       assertEquals(42, location.getY());
    }
 }
+// END:class

@@ -20,3 +20,7 @@ sourceSets {
         java { srcDirs = ['src/test/java'] }
     }
 }
+
+tasks.withType(JavaCompile) {
+    options.release = 21
+}

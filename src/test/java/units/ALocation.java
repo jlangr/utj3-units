@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static units.Location.Heading.*;
 
-// START:newtests
 public class ALocation {
    @Test
    void increasesYCoordinateWhenMovingNorth() {
@@ -17,6 +16,7 @@ public class ALocation {
       assertEquals(42, location.getY());
    }
 
+   // START:newtests
    @Test
    // START_HIGHLIGHT
    void increasesXCoordinateWhenMovingEast() {
@@ -52,5 +52,5 @@ public class ALocation {
       assertEquals(-14, location.getX());
       assertEquals(5, location.getY());
    }
-}
 // END:newtests
+}

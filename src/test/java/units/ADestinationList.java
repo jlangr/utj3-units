@@ -47,9 +47,9 @@ class ADestinationList {
    }
    //END:noDuplicates
 
-   //START:moveLocations
    @Nested
    class MoveLocationsWithHeading {
+      //START:moveLocations
       @Test
       void updatesMatchingLocationsWithNewCoordinates() {
          list.add(new FixedLocation(0, 0, East));
@@ -62,12 +62,12 @@ class ADestinationList {
                new FixedLocation(1, 1, North)),
             list.getLocations());
       }
+      //END:moveLocations
    }
-   //END:moveLocations
 
-   // START:removeLocations
    @Nested
    class RemoveLocationsFurtherThan {
+      // START:removeLocations
       @Test
       void retainsLocationsLessThanDistance() {
          // START_HIGHLIGHT
@@ -82,6 +82,6 @@ class ADestinationList {
                new FixedLocation(0, 5, North)),
             list.getLocations());
       }
+      // END:removeLocations
    }
-   // END:removeLocations
 }

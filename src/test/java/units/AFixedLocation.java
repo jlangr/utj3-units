@@ -6,8 +6,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static units.FixedLocation.Heading.*;
 
-// END:moveMethod
 public class AFixedLocation {
+   // END:moveMethod
    @Test
    void increasesYCoordinateWhenMovingNorth() {
       assertEquals(new FixedLocation(0, 42, North),

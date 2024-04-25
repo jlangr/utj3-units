@@ -6,13 +6,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static units.StringUtils.capitalize;
 
+// END:zero
 public class SomeStringUtils {
    @Nested
    class Capitalize {
-      @Test
-      void returnsEmptyStringWhenEmpty() {
-         assertEquals("", capitalize(""));
-      }
+      // START:zero
+   @Test
+   void returnsEmptyStringWhenEmpty() {
+      assertEquals("", capitalize(""));
+   }
       // END:zero
 
       // START:one
@@ -35,7 +37,7 @@ public class SomeStringUtils {
          assertEquals("Omega", capitalize("OMEGA"));
       }
       // END:variant
-      // START:zero
    }
+   // START:zero
 }
 // END:zero

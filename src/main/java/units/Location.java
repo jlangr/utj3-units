@@ -25,12 +25,8 @@ public class Location {
    }
    // END_HIGHLIGHT
 
-   public int getX() {
-      return x;
-   }
-
-   public int getY() {
-      return y;
+   public Point getPoint() {
+      return new Point(x, y);
    }
 
    public Heading getHeading() {

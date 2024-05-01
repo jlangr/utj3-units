@@ -33,6 +33,10 @@ public class Location {
       return y;
    }
 
+   public Point getPoint() {
+      return new Point(x, y);
+   }
+
    public Heading getHeading() {
       return heading;
    }

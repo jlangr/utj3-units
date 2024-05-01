@@ -6,15 +6,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static units.Location.Heading.*;
 
 public class ALocation {
+   // START:point
    @Test
    void increasesYCoordinateWhenMovingNorth() {
       var location = new Location(0, 0, North);
 
       location.move(42);
 
-      assertEquals(0, location.getX());
-      assertEquals(42, location.getY());
+      // START_HIGHLIGHT
+      assertEquals(new Point(0, 42), location.getPoint());
+      // END_HIGHLIGHT
    }
+   // END:point
 
    // START:newtests
    @Test
@@ -25,8 +28,7 @@ public class ALocation {
 
       location.move(5);
 
-      assertEquals(3, location.getX());
-      assertEquals(0, location.getY());
+      assertEquals(new Point(3, 0), location.getPoint());
    }
 
    @Test
@@ -37,8 +39,7 @@ public class ALocation {
 
       location.move(9);
 
-      assertEquals(-2, location.getX());
-      assertEquals(-4, location.getY());
+      assertEquals(new Point(-2, -4), location.getPoint());
    }
 
    @Test
@@ -49,8 +50,7 @@ public class ALocation {
 
       location.move(12);
 
-      assertEquals(-14, location.getX());
-      assertEquals(5, location.getY());
+      assertEquals(new Point(-14, 5), location.getPoint());
    }
 // END:newtests
 }

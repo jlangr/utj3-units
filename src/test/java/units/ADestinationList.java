@@ -47,6 +47,21 @@ class ADestinationList {
    }
    //END:noDuplicates
 
+   //START:noTestObjects
+   @Test
+   void doesNotAddLocationAlreadyContained() {
+      list.add(new FixedLocation(0, 0, East));
+      list.add(new FixedLocation(3, 3, North));
+
+      list.add(new FixedLocation(0, 0, East));
+
+      assertEquals(
+         List.of(new FixedLocation(0, 0, East),
+                 new FixedLocation(3, 3, North)),
+         list.getLocations());
+   }
+   //END:noTestObjects
+
    @Nested
    class MoveLocationsWithHeading {
       //START:moveLocations

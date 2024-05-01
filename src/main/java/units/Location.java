@@ -31,6 +31,7 @@ public class Location {
    }
    // END:point
 
+
    public Heading getHeading() {
       return heading;
    }

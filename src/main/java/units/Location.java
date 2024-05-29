@@ -25,13 +25,6 @@ public class Location {
    }
    // END_HIGHLIGHT
 
-   // START:point
-   public Coordinate getCoordinate() {
-      return new Coordinate(x, y);
-   }
-   // END:point
-
-
    public Heading getHeading() {
       return heading;
    }

@@ -1,14 +1,15 @@
 package units;
 
 // START:fixedLocation
-public record FixedLocation(int x, int y, Heading heading) {
+public record FixedLocation(Coordinate coordinate, Heading heading) {
+   public FixedLocation(int x, int y, Heading heading) {
+      this(new Coordinate(x, y), heading);
+   }
+
    public FixedLocation move(int distance) {
-      return switch (heading) {
-         case North -> new FixedLocation(x, y + distance, heading);
-         case East -> new FixedLocation(x + distance, y, heading);
-         case South -> new FixedLocation(x, y - distance, heading);
-         case West -> new FixedLocation(x - distance, y, heading);
-      };
+      return new FixedLocation(
+         coordinate.move(distance, heading),
+         heading);
    }
 }
 // END:fixedLocation

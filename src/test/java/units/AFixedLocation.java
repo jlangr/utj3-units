@@ -1,34 +1,23 @@
 package units;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static units.Heading.*;
 
 // START:fixedLocation
 public class AFixedLocation {
+   public static final Coordinate ZERO_ZERO = new Coordinate(0, 0);
+
    @Test
-   void increasesYCoordinateWhenMovingNorth() {
-      assertEquals(new FixedLocation(0, 42, North),
-         new FixedLocation(0, 0, North).move(42));
+   void changesCoordinateOnMove() {
+      assertEquals(new Coordinate(0, 42),
+         new FixedLocation(ZERO_ZERO, North).move(42).coordinate());
    }
 
    @Test
-   void increasesXCoordinateWhenMovingEast() {
-      assertEquals(new FixedLocation(3, 0, East),
-         new FixedLocation(-2, 0, East).move(5));
-   }
-
-   @Test
-   void decreasesYCoordinateWhenMovingSouth() {
-      assertEquals(new FixedLocation(-2, -4, South),
-         new FixedLocation(-2, 5, South).move(9));
-   }
-
-   @Test
-   void decreasesXCoordinateWhenMovingWest() {
-      assertEquals(new FixedLocation(-14, 5, West),
-         new FixedLocation(-2, 5, West).move(12));
+   void doesNotChangeHeadingOnMove() {
+      assertEquals(North,
+         new FixedLocation(ZERO_ZERO, North).move(42).heading());
    }
 }
 // END:fixedLocation

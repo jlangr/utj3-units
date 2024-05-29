@@ -27,24 +27,18 @@ public class Location {
 
    public int getX() { return x; }
    public int getY() { return y; }
-
-   public Heading getHeading() {
-      return heading;
-   }
+   public Heading getHeading() { return heading; }
 
    @Override
    public boolean equals(Object o) {
       if (this == o) return true;
       if (o == null || getClass() != o.getClass()) return false;
       Location location = (Location) o;
-      return x == location.x && y == location.y
-          && heading == location.heading;
+      return x == location.x && y == location.y && heading == location.heading;
    }
 
    @Override
-   public int hashCode() {
-      return Objects.hash(x, y, heading);
-   }
+   public int hashCode() { return Objects.hash(x, y, heading); }
 
    @Override
    public String toString() {

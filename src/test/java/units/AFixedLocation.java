@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static units.Heading.*;
 
-// START:fixedLocation
+// START:test
 public class AFixedLocation {
    public static final Coordinate ZERO_ZERO = new Coordinate(0, 0);
 
@@ -20,4 +20,4 @@ public class AFixedLocation {
          new FixedLocation(ZERO_ZERO, North).move(42).heading());
    }
 }
-// END:fixedLocation
+// END:test

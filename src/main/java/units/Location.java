@@ -26,8 +26,8 @@ public class Location {
    // END_HIGHLIGHT
 
    // START:point
-   public Point getPoint() {
-      return new Point(x, y);
+   public Coordinate getCoordinate() {
+      return new Coordinate(x, y);
    }
    // END:point
 

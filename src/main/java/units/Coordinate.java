@@ -1,5 +1,5 @@
 package units;
 
 // START:impl
-public record Point(int x, int y) {}
+public record Coordinate(int x, int y) {}
 // END:impl

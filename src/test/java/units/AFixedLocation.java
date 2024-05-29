@@ -3,7 +3,7 @@ package units;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static units.FixedLocation.Heading.*;
+import static units.Heading.*;
 
 // START:fixedLocation
 public class AFixedLocation {

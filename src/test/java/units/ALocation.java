@@ -15,6 +15,7 @@ public class ALocation {
 
       assertEquals(0, location.getX());
       assertEquals(42, location.getY());
+      assertEquals(North, location.getHeading());
    }
 }
 // END:class

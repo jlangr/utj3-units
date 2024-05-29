@@ -1,7 +1,6 @@
 package units;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static units.Location.Heading.*;
 
@@ -13,7 +12,7 @@ public class ALocation {
 
       location.move(42);
 
-      assertEquals(new Point(0, 42), location.getPoint());
+      assertEquals(new Coordinate(0, 42), location.getCoordinate());
    }
 
    @Test
@@ -24,7 +23,7 @@ public class ALocation {
 
       location.move(5);
 
-      assertEquals(new Point(3, 0), location.getPoint());
+      assertEquals(new Coordinate(3, 0), location.getCoordinate());
    }
 
    @Test
@@ -35,7 +34,7 @@ public class ALocation {
 
       location.move(9);
 
-      assertEquals(new Point(-2, -4), location.getPoint());
+      assertEquals(new Coordinate(-2, -4), location.getCoordinate());
    }
 
    @Test
@@ -46,7 +45,7 @@ public class ALocation {
 
       location.move(12);
 
-      assertEquals(new Point(-14, 5), location.getPoint());
+      assertEquals(new Coordinate(-14, 5), location.getCoordinate());
    }
 }
 // END:newtests

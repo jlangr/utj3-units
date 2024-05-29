@@ -38,7 +38,7 @@ public class AFixedLocation {
    final static FixedLocation.Heading h = North;
 
    @Test
-   void is0WhenPointsAreTheSame() {
+   void is0WhenCoordinatesAreTheSame() {
       assertEquals(0, new FixedLocation(1, 2, h).distanceFrom(1, 2));
    }
 

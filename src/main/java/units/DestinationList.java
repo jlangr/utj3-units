@@ -10,8 +10,8 @@ public class DestinationList {
 
    // START:add
    public void add(FixedLocation location) {
-      if (locations.contains(location))
-         return;
+      if (locations.contains(location)) return;
+
       locations.add(location);
    }
    // END:add

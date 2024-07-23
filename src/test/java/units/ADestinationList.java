@@ -29,6 +29,7 @@ class ADestinationList {
    void allowsAddingLocations() {
       var locationOne = new FixedLocation(1, 2, North);
       var locationTwo = new FixedLocation(1, 3, East);
+
       list.add(locationOne);
       list.add(locationTwo);
 
